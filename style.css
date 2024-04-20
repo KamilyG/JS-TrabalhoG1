@@ -1,5 +1,5 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ header{
     align-items: center;
     text-align: center;
     padding-top: 1rem;
-    margin-top: 10px;
+    margin-top: 0.4rem;
 }
 
 .cabeçalho-link{
@@ -27,13 +27,21 @@ header{
 .cabeçalho-link a{
     color: #000;
     font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    transition: box-shadow 0.3s ease;
 }
 
+.cabeçalho-link a:hover {
+    box-shadow: 0 0 7px 7px #a923ec7a;
+    background-color: #a923ec7a;
+  }
+
 .logo{
-    height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
     background: transparent;
-    border: 1px solid #a923ec;
+    border: 0.1rem solid #a923ec;
     color: #a923ec;
     border-radius: 60%;
     display: inline-flex;
@@ -41,7 +49,12 @@ header{
     justify-content: center;
     font-size: 0.9rem;
     cursor: pointer;
+    transition: box-shadow 0.3s ease;
 }
+
+.logo:hover {
+    box-shadow: 0 0 5px 5px #a923ec96;
+  }
 
 body {
     background-color: rgb(224, 222, 222);
@@ -51,13 +64,12 @@ body {
 
 .container {
     display: flex;
-    max-width: 65rem;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    max-width: 70rem;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
     justify-content: center;
+    min-height: 90vh;
 }
 
 .container-img {
@@ -68,13 +80,18 @@ body {
 }
 
 .imgKamily {
-    width: 480px;
-    height: 480px;
+    width: 30rem;
+    height: 30rem;
     object-fit: cover;
     border-radius: 50%;
     padding: 1%;
     display: block;
+    transition: box-shadow 0.3s ease;
 }
+
+img:hover {
+    box-shadow: 0 5px 10px #a923ec96;
+  }
 
 .container-text{
     width: 100%;
@@ -86,12 +103,12 @@ body {
 
 .text h3{
     color: #000;
-    font-size: 3rem;
+    font-size: 3.2rem;
 }
 
 .text h1{
     color: #000;
-    margin-top: 10px;
+    margin-top: 0.4rem;
 }
 
 .text span{
@@ -101,16 +118,50 @@ body {
 .text p{
     color: #000;
     font-weight: 500;
-    margin-top: 10px;
-    font-size: 1rem;
+    margin-top: 0.7rem;
+    font-size: 1.3rem;
 }
 
 .redes-social{
-    margin-top: 20px;
+    margin-top: 1.4rem;
 }
 
 .redes-social a{
     color: #a923ec;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+#sobre {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 4rem;
+}
+
+#sobre h4,h2 {
+    margin: 1rem;
+}
+
+#contato {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 4rem;
+}
+
+.footer {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: #a923ec;
+    color: rgb(224, 222, 222);
+    font-size: 0.8rem;
 }
