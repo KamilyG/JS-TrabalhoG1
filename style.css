@@ -1,5 +1,18 @@
+@keyframes subirDescer {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 768px) {
 * {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,13 +21,16 @@
 }
 
 header{
+    background-color: rgba(224, 222, 222, 0.71);
     display: flex;
     justify-content: space-around;
-    max-width: 100%;
+    width: 100%;
     align-items: center;
     text-align: center;
-    padding-top: 1rem;
-    margin-top: 0.4rem;
+    padding: 0.7rem;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .cabeçalho-link{
@@ -26,7 +42,7 @@ header{
 
 .cabeçalho-link a{
     color: #000;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 0.5rem;
     padding: 0.5rem;
     transition: box-shadow 0.3s ease;
@@ -47,14 +63,14 @@ header{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
 }
 
 .logo:hover {
     box-shadow: 0 0 5px 5px #a923ec96;
-  }
+}
 
 body {
     background-color: rgb(224, 222, 222);
@@ -62,14 +78,14 @@ body {
     height: 100%;
 }
 
-.container {
+#home {
     display: flex;
     max-width: 70rem;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 96vh;
 }
 
 .container-img {
@@ -132,17 +148,71 @@ img:hover {
     margin-top: 0.2rem;
 }
 
-#sobre {
+.down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.animacao-subir-descer {
+    animation: subirDescer 2s linear infinite;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #474747;
+}
+
+.dados {
+    background-color: rgba(183, 183, 183, 0.456);
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 4rem;
 }
 
-#sobre h4,h2 {
+.dados h3 {
+    text-transform: uppercase;
     margin: 1rem;
+    margin-top: 5%;
+}
+
+
+#sobre p, #academica p{
+    padding:0 15% 0 15%;
+}
+
+#habilidades {
+    max-width: 50%;
+}
+
+#habilidade{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+#habilidade li{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#academica, #sobre, #habilidades {
+    margin: 2%;
+}
+
+#academica h3::after, #academica h3::before,
+#habilidades h3::after,#habilidades h3::before,
+#sobre h3::after, #sobre h3::before,
+#contato h2::after,#contato h2::before {
+
+    content: "";
+    background-color: #000;
+    width: 4rem;
+    height: 0.1rem;
+    display: inline-block;
+    margin: 0.5rem;
+    line-height: 0.1rem;
 }
 
 #contato {
@@ -151,7 +221,13 @@ img:hover {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 4rem;
+    margin: 3rem;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+}
+
+#contato h2{
+    text-transform: uppercase;
 }
 
 .footer {
@@ -161,7 +237,248 @@ img:hover {
     padding: 1rem;
     width: 100%;
     height: 100%;
-    background-color: #a923ec;
+    background-color: #a923ecae;
     color: rgb(224, 222, 222);
     font-size: 0.8rem;
+}
+}
+
+@media screen and (max-width: 767px) {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    header{
+        background-color: rgba(224, 222, 222, 0.71);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        margin: 0;
+        width: 100%;
+        padding: .5rem 0 .5rem 0;
+    }
+    
+    .cabeçalho-link{
+        display: flex;
+        font-weight: 300;
+        cursor: pointer;  
+    }
+    
+    .cabeçalho-link a{
+        color: #000;
+        font-size: 0.9rem;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .cabeçalho-link a:hover {
+        box-shadow: 0 0 7px 7px #a923ec7a;
+        background-color: #a923ec7a;
+      }
+    
+    .logo{
+        height: 2.5rem;
+        width: 2.5rem;
+        background: transparent;
+        border: 0.1rem solid #a923ec;
+        color: #a923ec;
+        border-radius: 60%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .logo:hover {
+        box-shadow: 0 0 5px 5px #a923ec96;
+    }
+    
+    body {
+        background-color: rgb(224, 222, 222);
+        width: 100%;
+        height: 100%;
+    }
+    
+    #home {
+        display: flex;
+        flex-direction: column;
+        max-width: 70rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20%;
+        align-items: center;
+        justify-content: center;
+        min-height: 96vh;
+        text-align: center;
+    }
+    
+    .container-img {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .imgKamily {
+        width: 16rem;
+        height:16rem;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 1%;
+        display: block;
+        margin: 0 auto;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    img:hover {
+        box-shadow: 0 5px 10px #a923ec96;
+      }
+    
+    .container-text{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: block;
+    }
+    
+    .text h3{
+        color: #000;
+        font-size: 2.2rem;
+    }
+    
+    .text h1{
+        color: #000;
+        margin-top: 0.4rem;
+        font-size: 1.5rem;
+    }
+    
+    .text span{
+        color: #a923ec; 
+        font-size: 1.5rem;
+    }
+    
+    .text p{
+        display: none;
+    }
+    
+    .redes-social{
+        margin-top: 1.4rem;
+        margin-bottom: 2rem;
+
+    }
+    
+    .redes-social a{
+        color: #a923ec;
+        padding: 0.5rem;
+        margin-top: 0.2rem;
+    }
+    
+    .down {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .animacao-subir-descer {
+        animation: subirDescer 1s linear infinite;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #474747;
+    }
+    
+    .dados {
+        background-color: rgba(183, 183, 183, 0.456);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .dados h3 {
+        text-transform: uppercase;
+        margin: 1rem;
+        margin-top: 10%;
+        font-size: 1.1rem;
+    }
+    
+    #sobre p, #academica p{
+        padding:0 15% 0 15%;
+        font-size: 1rem;
+
+    }
+
+    #habilidade{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #habilidade li{
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-bottom: 10%;
+        font-size: 1rem;
+    }
+    
+    #academica, #sobre, #habilidades {
+        margin: 2%;
+    }
+    
+    #academica h3::after, #academica h3::before,
+    #habilidades h3::after,#habilidades h3::before,
+    #sobre h3::after, #sobre h3::before,
+    #contato h2::after,#contato h2::before {
+        content: "";
+        background-color: #000;
+        width: 1.5rem;
+        height: 0.1rem;
+        display: inline-block;
+        margin: 0.5rem;
+        line-height: 0.1rem;
+    }
+    
+    #contato {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 3rem;
+        margin-bottom: 0;
+        margin-top: 1.3rem;
+        padding-bottom: 2rem;
+    }
+    
+    #contato h2{
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    #contato p{
+        font-size: 0.8rem;
+    }
+    
+    .footer {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+        background-color: #a923ecae;
+        color: rgb(224, 222, 222);
+        font-size: 0.8rem;
+    }
 }

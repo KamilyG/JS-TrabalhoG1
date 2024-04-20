@@ -12,7 +12,7 @@
 <body>
         <header>
             <div class="logo">
-                KG
+                <a href="#home">KG</a>
             </div>
 
             <div class="cabeçalho-link">
@@ -24,7 +24,7 @@
             </div>
         </header>
 
-    <div class="container">
+    <div id="home">
         <div class="container-text">
             <div class="text">
                 <h3>Olá!</h3>
@@ -35,41 +35,64 @@
                     <a href="https://github.com/KamilyG"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/kamily-grolli-9b6156235/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://www.instagram.com/kamilygrolli"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:kamily369@live.com"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
         </div>
 
         <div class="container-img">
-            <img class="imgKamily" src="fotoPerfil.jpeg" alt="Foto perfil Kamily">
+            <img class="imgKamily" src="assets/fotoPerfil.jpeg" alt="Foto perfil Kamily">
         </div>
     </div>
 
-    <!--ADICIONAR SETA JAVASCRIPT APONTANDO APRA BAIXO?--> 
-
-    <div id="sobre">
-        <h2>Sobre</h2>
-        <p>Curiosa por desvendar o que a tecnologia ainda pode nos proporcionar, sou estudante de Ciência da Computação em Passo Fundo-RS.</p>
-        <p>Minhas habilidades em aprendizagem rápida, raciocínio lógico e resolução de problemas me impulsionam a buscar novos desafios e me aprofundar na área de Engenharia e Ciência de Dados.</p>
-
-        <h4>Formação Acadêmica</h4>
-        <p>Ciência da Computação na Atitus Educação.</p>
-        <p>01/2022 - previsão para 12/2025</p>
-
-        <h4>Habilidades</h4>
-        <p>Idiomas: Português, Inglês e italiano.</p>
-        <p>Linguagens de programação: Java, Python, Kotlin, Ruby e JavaScript.</p>
-        <p>Banco de dados: Relacionais PostgreSQL e Oracle, e não-relacional Neo4J.</p>    
+    <div class="down">
+        <a href="#sobre"><i class="fa-solid fa-chevron-down animacao-subir-descer" aria-hidden="true"></i></a>
     </div>
 
-    <div id="contato">
-        <h2>Contato</h2>
-        <p>Você pode me encontrar no LinkedIn (link) ou entrar em contato por e-mail (email) ou WhatsApp (whatsapp).</p>
-        <p>Estou pronta para novos desafios e ansiosa para aprender e crescer na área!</p>
-        <!--
-            email
-            link whats
-            linkedin
-        -->
+        <div class="dados"> 
+            <div id="sobre">
+                <h3>Sobre</h3>
+                <p>Curiosa por desvendar o que a tecnologia ainda pode nos proporcionar, sou estudante de Ciência da Computação em Passo Fundo-RS
+                    mas atualmente moro em Nova ALvorada-RS.</p>
+                <p>Minhas habilidades em aprendizagem rápida, raciocínio lógico e resolução de problemas me impulsionam a buscar novos desafios e me aprofundar na área de Engenharia e Ciência de Dados.</p>
+            </div>
+
+            <div id="academica">
+                <h3>Formação Acadêmica</h3>
+                <p>Ciência da Computação na <a href="https://atitus.edu.br/">Atitus Educação</a>.</p>
+                <p>01/2022 - previsão para 12/2025</p>
+            </div>
+            
+            <div id="habilidades">
+                <h3>Habilidades</h3>
+                <div id="habilidade">
+                    <li><b>Idiomas:</b>
+                        <p>Portugês</p>
+                        <p>Inglês</p>
+                        <p>Italiano</p>
+                    </li>
+                    <li><b>Linguagens de programação:</b>
+                        <p>Java</p>
+                        <p>Python</p>
+                        <p>Kotlin</p>
+                        <p>Ruby</p>
+                        <p>JavaScript</p>
+                    </li>
+                    <li><b>Banco de dados:</b>
+                        <p>PostgreSQL</p>
+                        <p>Oracle</p>
+                        <p>Neo4J</p>
+                    </li>
+                </div>
+            </div>
+
+            <div id="contato">
+                <h2>Contato</h2>
+                <p>Você pode me encontrar no <a href="https://www.linkedin.com/in/kamily-grolli-9b6156235/">LinkedIn</a>,
+                    entrar em contato por <a href="mailto:kamily369@live.com">e-mail</a> ou <a href="https://wa.me//5554984080391">WhatsApp</a>.</p>
+                <p>Estou pronta para novos desafios e ansiosa para aprender e crescer na área!</p>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">
